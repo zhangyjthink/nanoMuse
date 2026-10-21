@@ -9,6 +9,7 @@ const api = (process.env.NANOMUSE_API ?? "127.0.0.1:8787").replace(/^https?:\/\/
 // The production build is written straight into the Python package so that
 // `pip install nanomuse` ships the app and `nanomuse serve` can serve it.
 export default defineConfig({
+  base: "./",
   plugins: [react(), tailwindcss()],
   build: {
     outDir: "../nanomuse/server/static",
