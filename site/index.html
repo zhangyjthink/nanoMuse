@@ -1,18 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <title>nanoMuse — moved to nanomuse.cn</title>
-    <meta http-equiv="refresh" content="0; url=https://nanomuse.cn/" />
-    <link rel="canonical" href="https://nanomuse.cn/" />
-    <meta name="robots" content="noindex" />
-    <script>location.replace("https://nanomuse.cn/" + location.hash);</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+    <title>nanoMuse — 个人智能体在线工作台</title>
     <style>
-      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; min-height: 100vh; display: grid; place-items: center; color: #1d1d1f; }
-      a { color: #0a66e4; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #0f172a;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
     </style>
   </head>
   <body>
-    <p>The nanoMuse homepage has moved to <a href="https://nanomuse.cn/">nanomuse.cn</a>. The earlier page is kept at <a href="legacy.html">legacy.html</a>.</p>
+    <iframe src="https://demo.nanomuse.dev/" allow="clipboard-read; clipboard-write; microphone; camera; geolocation"></iframe>
   </body>
 </html>
