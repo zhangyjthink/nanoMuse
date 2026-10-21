@@ -32,8 +32,40 @@ jobs:
           npm ci
           npm run build
           mkdir -p ../site/app
-          cp -R ../nanomuse/server/static/. ../site/
           cp -R ../nanomuse/server/static/. ../site/app/
+
+      - name: Assemble Portal Entry Page
+        run: |
+          cat << 'HTML' > site/index.html
+          <!doctype html>
+          <html lang="zh-CN">
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+              <title>nanoMuse — 个人智能体在线工作台</title>
+              <style>
+                html, body {
+                  margin: 0;
+                  padding: 0;
+                  width: 100%;
+                  height: 100%;
+                  overflow: hidden;
+                  background: #0f172a;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                }
+                iframe {
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                  display: block;
+                }
+              </style>
+            </head>
+            <body>
+              <iframe src="https://demo.nanomuse.dev/" allow="clipboard-read; clipboard-write; microphone; camera; geolocation"></iframe>
+            </body>
+          </html>
+          HTML
 
       - name: Assemble site/assets
         run: |
